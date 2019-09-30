@@ -1,7 +1,7 @@
 const http = require('http');
-const app = require('./app');
-const logger = require('./config').loggerFactory('server', {level:'info'})
 require('dotenv').config();
+const app = require('./app');
+const logger = require('./factories').loggerFactory('server', {level:'info'})
 
 const server = http.createServer(app);
 

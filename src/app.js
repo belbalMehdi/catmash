@@ -4,8 +4,7 @@
  */
 
 const express = require('express');
-const logger = require('./config').loggerFactory('server', {level:'info'})
-
+const logger = require('./factories').loggerFactory('server', {level:'info'})
 const app = express();
 
 app.use(express.json());

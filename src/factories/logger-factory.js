@@ -10,13 +10,13 @@ const winston = require('winston');
 
 exports.loggerFactory = function(loggerName, options={}){
     return winston.createLogger({
-        level : options.level||'info',
-        format : winston.format.combine(
+        level: options.level||'info',
+        format: winston.format.combine(
             winston.format.label({label:options.label||loggerName}),
             winston.format.timestamp(),
             winston.format.logstash()
         ),
-        transports : [
+        transports: [
             new winston.transports.Console(),
             new winston.transports.File({
                 filename : `${require.main.path}/../logs/${loggerName}.log`
