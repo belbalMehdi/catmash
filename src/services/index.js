@@ -1,0 +1,1 @@
+exports.CatService = require('./cat.service');
