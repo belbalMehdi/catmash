@@ -33,6 +33,10 @@ exports.getCatsRanking = async function(){
 /** Service de vote pour un chat */
 exports.voteForCat = async function(catId){
     let cat;
+    if(!catId){
+        logger.error(error);
+        throw new Error("cat id is not defined in the request body");
+    }
     try{
         cat = await Cat.findOne({id:catId});
         await cat.updateOne({$inc : {votes:1}})
