@@ -14,7 +14,7 @@ exports.loggerFactory = function(loggerName, options={}){
         format: winston.format.combine(
             winston.format.label({label:options.label||loggerName}),
             winston.format.timestamp(),
-            winston.format.logstash()
+            winston.format.simple()
         ),
         transports: [
             new winston.transports.Console(),
