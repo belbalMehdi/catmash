@@ -4,7 +4,8 @@
  */
 
 const express = require('express');
-const logger = require('./factories').loggerFactory('server', {level:'info'})
+const { CatRouter } = require('./routers');
+
 const app = express();
 
 /** Initalisation de la base de données si vide*/
@@ -13,9 +14,9 @@ require('./utils').dbInitilizer();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/', (req, res)=>{
-    res.json({appname:'catmash'});
-})
-
+/**
+ * Mapping du CatRouter sur toutes les requêtes entrantes à l'application
+ */
+app.use(CatRouter);
 
 module.exports = app;
