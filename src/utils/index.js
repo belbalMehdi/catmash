@@ -1,0 +1,1 @@
+exports.dbInitilizer = require('./db-initializer');

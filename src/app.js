@@ -7,6 +7,9 @@ const express = require('express');
 const logger = require('./factories').loggerFactory('server', {level:'info'})
 const app = express();
 
+/** Initalisation de la base de données si vide*/
+require('./utils').dbInitilizer();
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
