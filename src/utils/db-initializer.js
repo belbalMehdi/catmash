@@ -2,7 +2,7 @@ const Cat = require('../models').Cat;
 const cats = require('../../data/cats.json').images;
 
 /**
- * Initilisation de la base de données depuis le fichier json fournit data/cats.json si celle ci est vide 
+ * Initilisation du schema "Catmash" de la base de données depuis un fichier json fournit data/cats.json si celle ci est vide 
  */
 
 async function initializeCollection(){

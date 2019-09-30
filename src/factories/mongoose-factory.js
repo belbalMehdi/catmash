@@ -7,7 +7,6 @@ const logger = require('../factories').loggerFactory('mongoose', {level:'info', 
  */
 
 mongoose.set('useUnifiedTopology', true);
-console.log(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DB}`);
 mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DB}`, {useNewUrlParser: true});
 const database = mongoose.connection;
 
