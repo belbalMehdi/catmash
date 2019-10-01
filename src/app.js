@@ -25,7 +25,7 @@ app.use(cors());
 /**
 	Morgan middleware active les logs d'accés au serveur http 
  */
-app.use(morgan('combined');
+app.use(morgan('combined'));
 
 
 /**
