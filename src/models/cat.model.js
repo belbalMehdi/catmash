@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 /**
  * Schema Cat contenant: 
- * #id identifiant du chat
- * #url l'url de l'image du chat
- * #votes nombres de votes pour le chat cette valeur est initaliser à 0 a la création de l'entité
+ * @property id identifiant du chat
+ * @property url l'url de l'image du chat
+ * @property votes nombres de votes pour le chat cette valeur est initaliser à 0 a la création de l'entité
  */
 const catSchema = mongoose.Schema({
     id: String,
